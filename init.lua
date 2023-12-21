@@ -1,5 +1,5 @@
 -- Change this to the folder corresponding to your current OS.
-local environment = "windows" 
+local environment = "mac" 
 
 require(environment .. ".plugins-setup")
 require(environment .. ".core.options")
