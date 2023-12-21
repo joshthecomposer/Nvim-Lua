@@ -1,6 +1,10 @@
-require("windows.core.keymaps")
-require("windows.core.colorscheme")
-require("windows.core.options")
-require("windows.plugins-setup")
-require("windows.plugins.treesitter")
-local default_directory = "G:/E Drive/Software_Dev/"
+-- Change this to the folder corresponding to your current OS.
+local environment = "windows"
+
+require(environment .. ".core.colorscheme")
+require(environment .. ".core.options")
+require(environment .. ".plugins-setup")
+require(environment .. ".plugins.treesitter")
+require(environment .. ".plugins.harpoon")
+require(environment .. ".plugins.lsp")
+

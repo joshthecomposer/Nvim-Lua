@@ -1,3 +1,4 @@
+local default_directory = "G:/E Drive/Software_Dev/"
 vim.o.number = true
 vim.o.mouse = 'a'
 vim.o.tabstop = 4
