@@ -15,6 +15,7 @@ if default_folder == 'windows' then
 	vim.api.nvim_create_user_command(
 		'GitBash',
 		function()
+			vim.cmd('split')
 			vim.cmd([[term "C:/Program Files/Git/bin/bash.exe"]])
 		end,
 		{}
