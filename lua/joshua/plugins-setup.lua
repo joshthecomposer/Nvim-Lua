@@ -9,8 +9,6 @@ return require('packer').startup(function(use)
 	-- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
 	}
-	use('theprimeagen/harpoon')	
-
 	 use {
 		  'VonHeikemen/lsp-zero.nvim',
 		  branch = 'v1.x',
@@ -33,10 +31,6 @@ return require('packer').startup(function(use)
 			  {'rafamadriz/friendly-snippets'},
 		  }
 	  }
-
 	  use("folke/zen-mode.nvim")
-	  use("github/copilot.vim")
-	  use("eandrju/cellular-automaton.nvim")
 	  use("laytan/cloak.nvim")
-	  use('tpope/vim-commentary')
 end)

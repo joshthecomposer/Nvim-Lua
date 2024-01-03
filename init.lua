@@ -1,14 +1,14 @@
 -- Change this to the folder corresponding to your current OS.
-local environment = "joshua" 
-local default_folder = 'windows'
+local environment = "joshua"
+local default_folder = 'mac'
 
 require(environment .. ".plugins-setup")
 require(environment .. ".core.options")
 require(environment .. ".core.colorscheme")
 require(environment .. ".core.keymaps")
 require(environment .. ".plugins.treesitter")
+require(environment .. ".plugins.telescope")
 require(environment .. ".plugins.lsp")
-require(environment .. ".plugins.harpoon")
 
 if default_folder == 'windows' then
 	vim.cmd[[cd G:\E\ Drive\Software_Dev]]
