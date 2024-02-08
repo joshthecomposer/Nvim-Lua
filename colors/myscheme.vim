@@ -4,11 +4,14 @@ hi! Normal guibg=#041818 guifg=#d3b58d
 hi! EndOfBuffer guibg=#041818 guifg=#d3b58d
 hi! Identifier guibg=#041818 guifg=#d3b58d
 hi! Statement guibg=#041818 guifg=#d3b58d
-hi! Pmenu guibg=#041818 guifg=#d3b58d
-hi! PmenuSel guibg=#041818 guifg=#d3b58d
+hi! Pmenu guifg=gray10 guifg=darkseagreen4
+hi! CocInfoFloat guifg=gray10 guifg=darkseagreen4
+hi! PmenuSbar guifg=gray10 guifg=darkseagreen4
+hi! PmenuThumb guifg=gray10 guifg=darkseagreen4
+hi! PmenuSel guibg=gray10 guifg=darkseagreen4
 hi! DiagnosticError guibg=#041818 guifg=#d3b58d
 hi! DiagnosticWarn guibg=#041818 guifg=#d3b58d
-hi! DiagnosticUnderlineWarn guisp=#d3b58d
+hi! DiagnosticUnnecessary guifg=white
 hi! DiagnosticInfo guibg=#041818 guifg=#d3b58d
 hi! DiagnosticHint guibg=#041818 guifg=#d3b58d
 hi! SignColumn guibg=#041818 guifg=#d3b58d
@@ -16,6 +19,7 @@ hi! Whitespace guifg=#d3b58d
 hi! netrwDir guifg=#c8d4ec
 hi! Constant guifg=#d3b58d
 hi! PreProc guifg=#d3b58d
+hi! Type guifg=#d3b58d
 hi! Type guifg=#d3b58d
 hi! Special guifg=#d3b58d
 hi! Underlined guifg=#d3b58d
