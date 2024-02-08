@@ -2,11 +2,9 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
-    use({ 'rose-pine/neovim', as = 'rose-pine' })
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate', prefer_git = false})
 	use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.5',
-	-- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
 	}
 	 use {
@@ -33,4 +31,5 @@ return require('packer').startup(function(use)
 	  }
 	  use("folke/zen-mode.nvim")
 	  use("laytan/cloak.nvim")
+	  use("ThePrimeagen/harpoon")
 end)

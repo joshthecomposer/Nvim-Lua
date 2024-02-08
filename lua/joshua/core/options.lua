@@ -8,3 +8,4 @@ vim.o.splitbelow = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.backspace = "indent,eol,start"
+vim.o.termguicolors = true

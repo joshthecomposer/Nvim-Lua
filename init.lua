@@ -1,32 +1,24 @@
--- Change this to the folder corresponding to your current OS.
-local environment = "joshua"
-local default_folder = 'mac'
+local default_folder = 'windows'
 
-require(environment .. ".plugins-setup")
-require(environment .. ".core.options")
-require(environment .. ".core.colorscheme")
-require(environment .. ".core.keymaps")
-require(environment .. ".plugins.treesitter")
-require(environment .. ".plugins.telescope")
-require(environment .. ".plugins.lsp")
+require("joshua.plugins-setup")
+require("joshua.core.options")
+require("joshua.core.keymaps")
+require("joshua.plugins.treesitter")
+require("joshua.plugins.telescope")
+require("joshua.plugins.lsp")
+
 
 if default_folder == 'windows' then
-	vim.cmd[[cd G:\E\ Drive\Software_Dev]]
+	vim.cmd[[cd F:\E\ Drive\Software_Dev]]
 	vim.api.nvim_create_user_command(
-		'GitBash',
-		function()
-			vim.cmd('split')
-			vim.cmd([[term "C:/Program Files/Git/bin/bash.exe"]])
-		end,
-		{}
+	  'GoNvimConfig',
+	  function()
+		vim.cmd[[Explore C:\Users\termi\AppData\Local\nvim]]
+	  end,
+	  {}
 	)
-elseif defaul_folder == 'mac' then
+elseif default_folder == 'mac' then
 	vim.cmd[[cd ~/dev]]
-	vim.api.nvim_create_user_command(
-		'MacZsh',
-		function()
-			vim.cmd([[term zsh]])
-		end,
-		{}
-	)
 end
+
+vim.cmd[[colorscheme myscheme]]

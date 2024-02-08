@@ -9,24 +9,7 @@ lsp.ensure_installed({
 	'html',
 	'cssls',
 	'omnisharp',
-	'solargraph',
 	'lua_ls',
-	'rubocop'
-})
-
-local function ruby_root_pattern(fname)
-  local util = require 'lspconfig/util'
-  return util.root_pattern('Gemfile', '.git')(fname) or util.path.dirname(fname)
-end
-
-lsp.set_preferences({
-	sign_icons = { },
-	server_settings = {
-		solargraph = {
-			root_dir = ruby_root_pattern,
-			diagnostics = true,
-		},
-	},
 })
 
 lsp.on_attach(function(client,bufnr)
@@ -36,3 +19,4 @@ lsp.on_attach(function(client,bufnr)
 end)
 
 lsp.setup()
+
