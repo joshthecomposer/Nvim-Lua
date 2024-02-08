@@ -21,4 +21,4 @@ elseif default_folder == 'mac' then
 	vim.cmd[[cd ~/dev]]
 end
 
-vim.cmd[[colorscheme myscheme]]
+vim.cmd[[colorscheme habamax]]
