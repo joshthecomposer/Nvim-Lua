@@ -29,7 +29,5 @@ return require('packer').startup(function(use)
 			  {'rafamadriz/friendly-snippets'},
 		  }
 	  }
-	  use("folke/zen-mode.nvim")
 	  use("laytan/cloak.nvim")
-	  use("ThePrimeagen/harpoon")
 end)
