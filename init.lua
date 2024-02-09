@@ -7,7 +7,6 @@ require("joshua.plugins.treesitter")
 require("joshua.plugins.telescope")
 require("joshua.plugins.lsp")
 
-
 if default_folder == 'windows' then
 	vim.cmd[[cd F:\E\ Drive\Software_Dev]]
 	vim.api.nvim_create_user_command(
@@ -21,4 +20,6 @@ elseif default_folder == 'mac' then
 	vim.cmd[[cd ~/dev]]
 end
 
-vim.cmd[[colorscheme habamax]]
+require("joshua.core.colors")
+--vim.cmd[[colorscheme myscheme]]
+--vim.cmd[[colorscheme substrata]]

@@ -6,7 +6,6 @@ hi! EndOfBuffer guibg=#041818 guifg=#d3b58d
 hi! Identifier guibg=#041818 guifg=#d3b58d
 hi! Statement guifg=#d3b58d
 hi! Pmenu guifg=darkseagreen4 guibg=darkgray10
-hi! CocInfoFloat guifg=gray10 guifg=darkseagreen
 hi! PmenuSbar guifg=gray10 guifg=darkseagreen
 hi! PmenuThumb guifg=gray10 guifg=darkseagreen
 hi! PmenuSel guibg=gray10 guifg=darkseagreen
@@ -16,7 +15,6 @@ hi! DiagnosticUnnecessary guifg=white
 hi! DiagnosticInfo guibg=#041818 guifg=#d3b58d
 hi! DiagnosticHint guibg=#041818 guifg=#d3b58d
 hi! SignColumn guibg=#041818 guifg=#d3b58d
-hi! Whitespace guibg=#041818 guifg=#d3b58d
 hi! netrwDir guifg=#c8d4ec
 hi! Constant guifg=lightgreen
 hi! Class guifg=lightgreen
@@ -39,5 +37,6 @@ hi! String guifg=lightgreen
 hi! Number guifg=lightblue
 hi! Boolean guifg=lightgreen
 hi! Cursor guifg=#041818 guibg=#d3b58d
+hi! StorageClass guifg=#041818 guibg=#d3b58d
 
 set guifont=JetBrains\ Mono\ NL:h16
