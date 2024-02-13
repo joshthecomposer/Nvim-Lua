@@ -1,4 +1,4 @@
-local default_folder = 'windows'
+local default_folder = 'mac'
 
 require("joshua.plugins-setup")
 require("joshua.core.options")
@@ -17,7 +17,14 @@ if default_folder == 'windows' then
 	  {}
 	)
 elseif default_folder == 'mac' then
-	vim.cmd[[cd ~/dev]]
+	vim.cmd[[cd /Users/joshuawise/dev]]
+	vim.api.nvim_create_user_command(
+	  'GoNvimConfig',
+	  function()
+		vim.cmd[[Explore /Users/joshuawise/.config/nvim]]
+	  end,
+	  {}
+	)
 end
 
 require("joshua.core.colors")
