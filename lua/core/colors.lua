@@ -15,7 +15,8 @@ local colors = {
     grey = 'grey',
 	grey10 = 'grey10',
 	sky_gray_blue = '#c8d4ec',
-	red = 'red'
+	red = 'red',
+	blue = 'blue'
 }
 
 local function set_highlight(group, color)
@@ -31,7 +32,7 @@ local function apply_my_theme()
 	--Modes
 	set_highlight("Normal", {fg = colors.default_fg, bg = colors.default_bg})
 	set_highlight("NormalFloat", {fg = colors.default_fg, bg = colors.default_bg})
-	set_highlight("Visual", {fg = colors.default_bg, bg = colors.default_fg})
+	set_highlight("Visual", {fg = colors.white, bg = colors.blue})
 	--set_highlight("Visual", {fg = colors.lighter_fg, bg = colors.darker_bg})
 
 	--Actions

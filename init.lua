@@ -1,11 +1,8 @@
 local default_folder = 'mac'
 
-require("joshua.plugins-setup")
-require("joshua.core.options")
-require("joshua.core.keymaps")
-require("joshua.plugins.treesitter")
-require("joshua.plugins.telescope")
-require("joshua.plugins.lsp")
+require('core.options')
+require('core.keymaps')
+require('config.lazy')
 
 if default_folder == 'windows' then
 	vim.cmd[[cd F:\E\ Drive\Software_Dev]]
@@ -27,6 +24,9 @@ elseif default_folder == 'mac' then
 	)
 end
 
-require("joshua.core.colors")
---vim.cmd[[colorscheme myscheme]]
---vim.cmd[[colorscheme substrata]]
+require('core.colors')
+vim.filetype.add({
+    extension = {
+        wgsl = "wgsl",
+    },
+})
