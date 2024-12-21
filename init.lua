@@ -5,7 +5,7 @@ require('core.keymaps')
 require('config.lazy')
 
 if default_folder == 'windows' then
-	vim.cmd[[cd F:\E\ Drive\Software_Dev]]
+	vim.cmd[[cd D:\Software_Dev]]
 	vim.api.nvim_create_user_command(
 	  'GoNvimConfig',
 	  function()
@@ -30,3 +30,4 @@ vim.filetype.add({
         wgsl = "wgsl",
     },
 })
+

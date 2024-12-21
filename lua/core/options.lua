@@ -9,3 +9,7 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.backspace = "indent,eol,start"
 vim.o.termguicolors = true
+vim.opt.shell = "bash"
+vim.opt.shellcmdflag = "-c"
+vim.opt.shellquote = ""
+vim.opt.shellxquote = ""

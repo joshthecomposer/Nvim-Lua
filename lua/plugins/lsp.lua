@@ -10,7 +10,6 @@ return {
         "hrsh7th/nvim-cmp",
         "L3MON4D3/LuaSnip",
         "saadparwaiz1/cmp_luasnip",
-        "j-hui/fidget.nvim",
     },
 
     config = function()
@@ -34,7 +33,7 @@ return {
 			border = "rounded",
 		})
 
-        require("fidget").setup({})
+        -- require("fidget").setup({})
         require("mason").setup()
         require("mason-lspconfig").setup({
             ensure_installed = {
@@ -88,6 +87,10 @@ return {
                 ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
                 ['<C-y>'] = cmp.mapping.confirm({ select = true }),
                 ["<C-Space>"] = cmp.mapping.complete(),
+				['<CR>'] = cmp.mapping.confirm({
+            		behavior = cmp.ConfirmBehavior.Replace, -- Replace the current word
+            	select = true, -- Automatically select the current suggestion if none selected
+        		}),
             }),
             sources = cmp.config.sources({
                 { name = 'nvim_lsp' },
