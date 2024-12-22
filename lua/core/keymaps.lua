@@ -7,7 +7,7 @@ vim.cmd [[
 	autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx lua vim.lsp.buf.format({timeout_ms = 1000})
 ]]
 vim.api.nvim_set_keymap('n', '<leader>t', ':split | terminal<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<C-q>', [[<C-\><C-n>]], { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>bd', ':bd!<CR>', {noremap = true, silent = true})
+vim.keymap.set('t', '<esc><esc>', [[<c-\><c-n>]], { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>bd', ':bd!<CR>', {noremap = true, silent = true})
 
 vim.cmd([[autocmd TermOpen * startinsert]])

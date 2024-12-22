@@ -1,4 +1,4 @@
-local default_folder = 'mac'
+local default_folder = 'windows'
 
 require('core.options')
 require('core.keymaps')
@@ -9,7 +9,7 @@ if default_folder == 'windows' then
 	vim.api.nvim_create_user_command(
 	  'GoNvimConfig',
 	  function()
-		vim.cmd[[Explore C:\Users\termi\AppData\Local\nvim]]
+		vim.cmd[[:vsplit | Explore C:\Users\termi\AppData\Local\nvim]]
 	  end,
 	  {}
 	)
