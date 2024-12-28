@@ -68,7 +68,6 @@ return {
 					require("lspconfig").wgsl_analyzer.setup {
 						capabilities = capabilities,
 						on_attach = on_attach,
-
 					}
 				end,
 			}
