@@ -1,8 +1,13 @@
-local default_folder = 'mac'
+local default_folder = 'windows'
 
 require('core.options')
 require('core.keymaps')
 require('config.lazy')
+
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+  pattern = {"*.gltf"},
+  command = "setfiletype json"
+})
 
 if default_folder == 'windows' then
 	vim.cmd[[cd D:\Software_Dev]]
