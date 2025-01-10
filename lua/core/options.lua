@@ -9,3 +9,12 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.backspace = "indent,eol,start"
 vim.o.termguicolors = true
+
+vim.api.nvim_create_autocmd('BufEnter', {
+  pattern = '*',
+  callback = function()
+    vim.opt.formatoptions:remove('c')
+    vim.opt.formatoptions:remove('r')
+    vim.opt.formatoptions:remove('o')
+  end,
+})
