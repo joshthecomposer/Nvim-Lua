@@ -10,15 +10,15 @@ vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
 })
 
 if default_folder == 'windows' then
-	vim.cmd[[cd D:\Software_Dev]]
-vim.opt.shell = "bash"
+	vim.cmd[[cd E:\Software_Dev]]
+vim.opt.shell = [[C:\PROGRA~1\Git\bin\bash.exe]]
 vim.opt.shellcmdflag = "-c"
 vim.opt.shellquote = ""
 vim.opt.shellxquote = ""
 	vim.api.nvim_create_user_command(
 	  'GoNvimConfig',
 	  function()
-		vim.cmd[[:vsplit | Explore C:\Users\termi\AppData\Local\nvim]]
+		vim.cmd[[:vsplit | Explore C:\Users\jdwis\AppData\Local\nvim]]
 	  end,
 	  {}
 	)
