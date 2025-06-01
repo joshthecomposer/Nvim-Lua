@@ -17,3 +17,5 @@ vim.api.nvim_create_autocmd("TermOpen", {
 vim.keymap.set('n', '<leader>t', ':split | terminal<CR>', { noremap = true, silent = true })
 
 vim.cmd([[autocmd TermOpen * startinsert]])
+vim.keymap.set("n", "<leader>gt", ":GitBlameToggle<Cr>")                         -- ToggleBlame
+vim.keymap.set("n", "<leader>gy", ":GitBlameCopyFileURL<Cr>")                    -- Copy file URL to clipboard

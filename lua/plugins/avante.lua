@@ -1,3 +1,9 @@
+local os = require("helpers.os")
+
+if not os.is_mac then
+  return {}
+end
+
 return {
   "yetone/avante.nvim",
   event = "VeryLazy",
@@ -13,7 +19,7 @@ return {
     provider = "copilot",
     auto_suggestions_provider = "copilot",
     copilot = {
-			model = "gemini-2.5-pro"
+      model = "gemini-2.5-pro"
     },
     openai = {
       endpoint = "https://api.githubcopilot.com",

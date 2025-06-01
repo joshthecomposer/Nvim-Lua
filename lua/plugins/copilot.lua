@@ -1,3 +1,9 @@
+local os = require("helpers.os")
+
+if not os.is_mac then
+  return {}
+end
+
 return {
   "zbirenbaum/copilot.lua",
   event = "InsertEnter",

@@ -1,42 +1,49 @@
+local uname = vim.loop.os_uname()
+local is_mac = uname.sysname == "Darwin"
+
+local dependencies = {
+	"hrsh7th/cmp-nvim-lsp",
+	"hrsh7th/cmp-buffer",
+	"hrsh7th/cmp-path",
+	"hrsh7th/cmp-cmdline",
+	"hrsh7th/nvim-cmp",
+	"L3MON4D3/LuaSnip",
+	"saadparwaiz1/cmp_luasnip",
+}
+
+if is_mac then
+	table.insert(dependencies, {
+		"zbirenbaum/copilot.lua",
+		cmd = "Copilot",
+		build = ":Copilot auth",
+		config = function()
+			require("copilot").setup({
+				suggestion = {
+					enabled = true,
+					auto_trigger = true,
+					keymap = {
+						accept = "<C-l>",
+						next = "<C-]>",
+						prev = "<C-[>",
+						dismiss = "<C-/>",
+					},
+				},
+				panel = { enabled = false },
+			})
+		end,
+	})
+
+	table.insert(dependencies, {
+		"zbirenbaum/copilot-cmp",
+		config = function()
+			require("copilot_cmp").setup()
+		end,
+	})
+end
+
 return {
 	"neovim/nvim-lspconfig",
-	dependencies = {
-		"hrsh7th/cmp-nvim-lsp",
-		"hrsh7th/cmp-buffer",
-		"hrsh7th/cmp-path",
-		"hrsh7th/cmp-cmdline",
-		"hrsh7th/nvim-cmp",
-		"L3MON4D3/LuaSnip",
-		"saadparwaiz1/cmp_luasnip",
-
-		{
-			"zbirenbaum/copilot.lua",
-			cmd = "Copilot",
-			build = ":Copilot auth",
-			config = function()
-				require("copilot").setup({
-					suggestion = {
-						enabled = true,
-						auto_trigger = true,
-						keymap = {
-							accept = "<C-l>",
-							next = "<C-]>",
-							prev = "<C-[>",
-							dismiss = "<C-/>",
-						},
-					},
-					panel = { enabled = false },
-				})
-			end,
-		},
-		{
-			"zbirenbaum/copilot-cmp",
-			config = function()
-				require("copilot_cmp").setup()
-			end,
-		},
-	},
-
+	dependencies = dependencies,
 	config = function()
 		local cmp = require("cmp")
 		local cmp_lsp = require("cmp_nvim_lsp")
@@ -57,6 +64,8 @@ return {
 		vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
 			border = "rounded",
 		})
+
+		-- TODO: Add logic for downloading the lsp if not installed
 		require("lspconfig").sorbet.setup {
 			cmd = { "srb", "tc", "--lsp" },
 			capabilities = capabilities,
