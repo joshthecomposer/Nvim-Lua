@@ -19,7 +19,7 @@ return {
     provider = "copilot",
     auto_suggestions_provider = "copilot",
     copilot = {
-      model = "gemini-2.5-pro"
+      model = "gpt-4.1"
     },
     openai = {
       endpoint = "https://api.githubcopilot.com",
